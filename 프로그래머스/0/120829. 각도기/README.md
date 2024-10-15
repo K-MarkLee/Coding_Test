@@ -1,6 +1,6 @@
 # [level 0] 각도기 - 120829 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120829#) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120829) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 10월 02일 15:32:52
+2024년 10월 15일 09:55:12
 
 ### 문제 설명
 
