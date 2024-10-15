@@ -1,5 +1,6 @@
-def solution(n):    
-    answer = 0
-    for i in range (1,n+1,1) :
-        answer += i if n%i == 0 else 0
-    return answer
+def solution(n):
+    result = 0
+    for i in range(1, n + 1):
+        if n % i == 0:
+            result += i
+    return result
