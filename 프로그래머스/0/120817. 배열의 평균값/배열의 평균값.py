@@ -1,3 +1,3 @@
+import numpy as np
 def solution(numbers):
-    total_sum = sum(numbers)
-    return (total_sum/len(numbers))
+    return np.mean(numbers)
