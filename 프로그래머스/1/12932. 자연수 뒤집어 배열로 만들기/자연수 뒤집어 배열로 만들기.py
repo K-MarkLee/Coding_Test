@@ -1,2 +1,5 @@
 def solution(n):
-    return [int(i)for i in reversed(str(n))]
+    list = [int(digit) for digit in str(n)]
+    list.reverse()
+    return list
+    
