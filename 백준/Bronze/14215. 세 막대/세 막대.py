@@ -1,7 +1,4 @@
 import sys
-num = list(map(int,sys.stdin.read().strip().split()))
+a, b, c = sorted(map(int,sys.stdin.read().strip().split()))
 
-if max(num)-(sum(num)-max(num)) < 0:
-    print(sum(num))
-else:
-    print(sum(num)-(max(num)-(sum(num)-max(num)))-1)
+print(2*(a+b)-1 if a+b<=c else a+b+c)
