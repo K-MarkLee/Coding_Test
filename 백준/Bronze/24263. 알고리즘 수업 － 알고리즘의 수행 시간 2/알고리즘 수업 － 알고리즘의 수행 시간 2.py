@@ -1,1 +1,1 @@
-print(input());print(1)
+print(f"{input()}\n1")
