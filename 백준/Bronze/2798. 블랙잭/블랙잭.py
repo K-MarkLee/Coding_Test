@@ -1,17 +1,24 @@
 import sys
 
-def newblackjack(n,m,cards):
-    final = 0
-    for i in range(n):
-        for j in range(i+1,n):
-            for k in range(j+1,n):
-                total = cards[i]+cards[j]+cards[k]
-                if total == m:
-                    return m
-                elif total < m and total > final:
-                    final = total
-    return final
-                
-n,m,*cards = map(int,sys.stdin.read().strip().split())
+N,M,*num_list=map(int,sys.stdin.read().strip().split())
+result = 0
+num_list.sort()
 
-print(newblackjack(n,m,cards))
+for i in range(N-2):
+    pointer1 = i+1
+    pointer2 = N-1
+    
+    while pointer1 < pointer2:
+        sum_num = num_list[i]+num_list[pointer1]+num_list[pointer2]
+        
+        if sum_num <= M:
+            if sum_num > result:
+                result = sum_num
+            pointer1 += 1
+        else:
+            pointer2 -= 1
+            
+        if result == M:
+            print(result)
+            sys.exit(0)
+print(result)
