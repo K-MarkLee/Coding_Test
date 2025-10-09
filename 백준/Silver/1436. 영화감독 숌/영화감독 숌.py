@@ -1,7 +1,7 @@
 import sys
 N = int(sys.stdin.read().strip())
 result = []
-i = 1
+i = 666
 
 while len(result) < N:
     if '666' in str(i):
