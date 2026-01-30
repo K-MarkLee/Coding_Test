@@ -1,7 +1,8 @@
 def solution(brown, yellow):
-    total = brown + yellow  
-    for height in range(3,total -1):  
-        if total % height == 0:  
-            width = total // height
-            if 2 * (width + height) - 4 == brown:
-                return [width, height]
+    total = brown + yellow
+    
+    for i in range(3, total):
+        n = total // i
+        if total % i == 0 and i >= n:
+            if (n-2)* (i-2) == yellow:
+                return [i , n]
