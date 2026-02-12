@@ -1,15 +1,9 @@
 def solution(code):
-    mode = 0 
-    answer = ''
-    for j, i in enumerate(code):
-        if i == "1":
-            if mode == 0:
-                mode = 1
-            else:
-                mode = 0
-        else:
-            if mode == 0 and j % 2 == 0:
-                answer += i
-            if mode == 1 and j % 2 != 0:
-                answer += i
-    return answer if answer else "EMPTY"
+    answer = []
+    mode = 0
+    for i, j in enumerate(code):
+        if j == "1":
+            mode = 1 - mode
+        elif i % 2 == mode:
+            answer.append(j)
+    return "".join(answer) or "EMPTY"
