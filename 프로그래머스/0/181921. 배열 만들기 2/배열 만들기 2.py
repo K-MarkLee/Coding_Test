@@ -2,16 +2,16 @@ from itertools import product
 def solution(l, r):
     result = set()
     
-    max_len= len(str(r))
+    length = len(str(r))
     
-    for i in range(1, max_len+1):
-        for j in product(['0','5'], repeat = i):
+    for i in range(1, length+1):
+        for j in product(['0','5'], repeat = length):
             num = int("".join(j))
-            
-            if l <= num <=r :
+            if l <= num <= r:
                 result.add(num)
     
-    if not result:
-        return [-1]
-    else:
+    if result:
         return sorted(list(result))
+    else:
+        return [-1]
+            
